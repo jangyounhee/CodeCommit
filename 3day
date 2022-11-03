@@ -1,0 +1,63 @@
+// 두 수의 나눗셈
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+
+int solution(int num1, int num2) {
+    int answer = 0;
+    
+    answer = (double)num1/num2 * 1000;
+    
+    return answer;
+} // ex) 3/2 * 1000 = 1500 -> 정수가 아닌 실수가 답이어서 double로 형변환 시켜줘야함. float으로도 되겠지? 차이점이나 찾아보자
+
+// 중복된 숫자 개수
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+
+// array_len은 배열 array의 길이입니다.
+int solution(int array[], size_t array_len, int n) {
+    int answer = 0;
+    for(int i = 0; i < array_len; i++) {
+        if(array[i] == n) answer++;
+    }
+    return answer;
+}
+
+// 머쓱이보다 키큰사람
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+
+// array_len은 배열 array의 길이입니다.
+int solution(int array[], size_t array_len, int height) {
+    int answer = 0;
+    
+    for(int i = 0; i < array_len; i++) {
+        if(array[i] > height) answer++;
+    }
+    return answer;
+} // 중복된 숫자 개수와 같은 유형이다
+
+// 편지
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+
+// 파라미터로 주어지는 문자열은 const로 주어집니다. 변경하려면 문자열을 복사해서 사용하세요.
+int solution(const char* message) {
+    int answer = 0;
+    answer = (int)message * 2;;
+    return answer;
+}  // C로 풀고 있었다 const char*란것이 굉장히 생소했고 검색을 해보니 상수포인터라고 했다. 근데 그게 뭔데... 정답율이 88%나 되는 이 문제를 30분 동안 붙들고 있었따.. 답을 찾지 못함ㅠㅠ
+   // 친구가 java로 바꿔서 풀라고 함.
+
+// 편지 -> JAVA로 바꾸고 바로 풀어버림... JAVA로 바꾸는게 있는줄도 처음 알았다. C로 푸는법은 억울해서 공부해봐야겠다.
+class Solution {
+    public int solution(String message) {
+        int answer = 0;
+        answer = message.length() * 2;
+        return answer;
+    }
+}
