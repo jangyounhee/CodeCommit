@@ -1,0 +1,15 @@
+// 팩토리얼
+class Solution {
+    public int solution(int n) {
+        int answer = 0;
+        int i = 1;
+        
+        while(true) {
+            answer++;
+            i = answer * i;
+            if(answer*i >= n) break;
+            System.out.println(i + " || " + answer + " || " + i*answer);
+        }
+        return answer;
+    }
+} // while(조건) {(조건)break}
