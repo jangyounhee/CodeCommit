@@ -1,0 +1,40 @@
+// 아이스 아메리카노
+class Solution {
+    public int[] solution(int money) {
+        int[] answer = new int [2];
+        
+        answer[0] = money/5500;
+        answer[1] = money%5500;
+        
+        return answer;
+    }
+} //어제 while문 배웠다고 괜히 while써서 ++시키다가 오래걸림 결국 쉬운 방법 택함
+
+// 피자 나눠 먹기(3)
+class Solution {
+    public int solution(int slice, int n) {
+        int answer = 0;
+        
+        if(n%slice == 0) {
+            answer = n/slice;
+        } else {
+            answer = n/slice+1;
+        }
+        
+        return answer;
+    }
+}
+
+// 배열 두 배 만들기
+class Solution {
+    public int[] solution(int[] numbers) {
+        int[] answer = new int [numbers.length];
+        
+        for(int i = 0; i < numbers.length; i++) {
+           numbers[i] = numbers[i]*2;
+        }
+        answer = numbers;
+        
+        return answer;
+    }
+} //조금만 더 신경쓰면 빨리 끝냈을 문제. *2에만 꽂혀서 *2가 맞는데 왜 자꾸 오류가 나지 했더니 numbers = numbers[i]*2 이렇게 하고 있었음
