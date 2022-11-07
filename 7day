@@ -1,0 +1,25 @@
+// 문자열 뒤집기
+class Solution {
+    public String solution(String my_string) {
+        String answer = "";
+        
+        String reverse = new StringBuffer(my_string).reverse().toString();
+         
+        answer = reverse;
+        return answer;
+    } //StringBuffer : 문자열 연산, string은 불변임, stringbuffer는 변화가능 (char로 재배열)
+      //append는 붙이기 ex) string str = "JAVA"  str.append(" Hello") = "JAVA Hello"
+      //reverse() : 문자열을 역순으로 반환하는 함수
+}
+
+// 배열 자르기
+class Solution {
+    public int[] solution(int[] numbers, int num1, int num2) {
+        int[] answer = {};
+        
+        answer = Arrays.copyOfRange(numbers, num1, num2);
+        
+        return answer;
+    }
+} // Arrays.copyOfRange : 범위 배열 복사
+  // 자꾸 오류나는데 왜 오류 나는지 전혀 모르겠음 내가 잘못 쓰고 있는건가? 내일 마저해야겠다
