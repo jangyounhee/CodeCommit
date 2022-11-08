@@ -1,0 +1,42 @@
+// 배열 원소의 길이
+class Solution {
+    public int[] solution(String[] strlist) {
+        int[] answer = new int[strlist.length];
+        
+        for(int i = 0; i < strlist.length; i++) {
+            answer[i] = strlist[i].length();
+        }
+        return answer;
+    }
+} // length() : 문자열의 길이
+
+// 배열자르기(어제 하던거 이어서 함)
+class Solution {
+    public int[] solution(int[] numbers, int num1, int num2) {
+        int[] answer = new int [num2-num1+1]; //num2개 만큼 값이 리턴돼야함. num2(3)-num1(1)=2기때문에 +1
+        
+        System.out.println(num2-num1);
+        for(int i = num1, j = 0; i <= num2; i++) { //i=num1(1), j=0; 1 <= 3; 1++ >  i = [2,3,4], j = [0,1,2] !!배열의 방은 0부터 시작
+            answer[j] = numbers[i];
+            j++;
+        }
+        
+        return answer;
+    }
+}  // 어제 쓰려던 방법  !!return Arrays.copyOfRange(numbers, num1, num2 + 1);!! 이게 답인데 왜 나는 자꾸 오류났던거지?\
+
+// 잘라서 배열로 저장하기 (못풀었음 내일 마저풀자)
+class Solution {
+    public String[] solution(String my_str, int n) {
+        String[] answer = {};
+        
+        System.out.println(my_str.length());
+        /*int j = 0;
+        for(int i = 0; i < n; i++) {
+            j++;
+        }*/
+        //answer = my_str.split("", n);
+        answer = my_str.substring(3, 6);
+        return answer;
+    }
+}
