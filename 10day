@@ -1,0 +1,18 @@
+// 숨어있는 숫자의 덧셈 (1)
+class Solution {
+    public int solution(String my_string) {
+        int answer = 0;
+        String intStr = my_string.replaceAll("[^\\d]", ""); // 정규식을 이용한 숫자 추출 "[^0-9]", "[^\\ㅇ]" ([정규식], "숫자가아닌 문자는 공백으로 변경")
+        
+        for(int i = 0; i < intStr.length(); i++) {
+            String num[] = new String [intStr.length()]; // 문자열 숫자 담을 배열 만들기
+            
+            num[i] = intStr.substring(i, i+1); // 문자열 숫자 잘라서 배열에 넣기
+            System.out.print(num[i]);
+            
+            answer+=Integer.parseInt(num[i]); // 배열 방에 있는 숫자들 더하기
+        }
+        
+        return answer;
+    }
+}
