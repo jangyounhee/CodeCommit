@@ -1,0 +1,14 @@
+// 최댓값 만들기
+import java.util.*;
+
+class Solution {
+    public int solution(int[] numbers) {
+        int answer = 0;
+        
+        Arrays.sort(numbers);  //함수 정렬, 오름차순 / 내림차순 : Arrays.sort(arr, Collections.reverseOrder());
+        
+        answer = numbers[numbers.length-2] * numbers[numbers.length-1];
+        
+        return answer;
+    }
+}
