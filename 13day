@@ -1,0 +1,38 @@
+// 약수구하기
+class Solution {
+    public int[] solution(int n) {
+        int[] answer = {};
+        int[] arr = new int [n];
+        int j = 0;
+        
+        for(int i = 1; i <= n; i++) {
+            if(n%i == 0) { //n의 약수구하기 나머지가 0일때
+                arr[j] = i; //arr[]에 값 넣기
+                j++;
+            }
+        }
+        answer = new int [j]; //answer[]에 j만큼 배열 방 만들어주기
+        for(int i = 0; i < j; i++) { // 배열 방 번호 찾기
+            if(arr[i] != 0) {
+                answer[i] = arr[i]; // answer배열 방에 arr배열 방 값 넣어주기
+            }
+        }
+        return answer;
+    }
+}
+
+// A로 B만들기 (못 풀었음 이유모르겠음)
+class Solution {
+    public int solution(String before, String after) {
+        int answer = 0;
+        String reverse = new StringBuffer(before).reverse().toString(); //before 문자열 뒤집어서 reverse에 저장
+        
+        if(reverse.equals(after)) { //reverse와 after가 같으면 1 아니면 0
+            answer = 1;   
+        } else {
+            answer = 0;   
+        }
+        System.out.println(reverse.equals(after));
+        return answer;  // 코드실행시에는 문제 없음. 제출하니까 테스트가 몇개는 맞고 몇개는 틀림 이유 찾아봐야함 오늘은 피곤하니 ㅇㅕ기까지..
+    }
+}
