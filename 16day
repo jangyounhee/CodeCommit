@@ -1,0 +1,43 @@
+// 숫자 찾기
+import java.util.*;
+
+class Solution {
+    public int solution(int num, int k) {
+        int answer = 0;
+        int count = 1;
+        
+        while(num/10 > 0) {                
+            if(num % 10 == k) {
+                answer = 0;
+            }
+            num /= 10;
+            ++count;
+        }
+        if(num%10 == k) {
+          answer = count;
+        }
+        answer = check > 0 count-answer+1 : -1;
+            
+        /*for(int i = 0; i < strNum.length(); i++) { // 여기는 풀다가 망침..ㅠㅠ 몬가 될 듯하다가 아닌거 같아서 고치고 또 고치고 고치고 하다 걍 포기
+            int answer = 0;                         // indexOf도 쓰<ㄹ려구했는데 자꾸 오류남 뭔가 이해를 잘못했었나보다 ㅜ
+            String strNum = String.valueOf(num); // int 개별 자릿수 구하기 전 int > String으로 변환하기
+            char cha = strNum.charAt(i);    
+            
+            int chaInt = Character.getNumericValue(cha);
+            
+            j++;
+            if(chaInt.in == k) {
+                answer = j;
+            } else {
+                answer = -1;
+            }
+            
+            System.out.println(chaInt);
+            
+            //if(chaInt == k) answer = j; else answer = -1;
+            //System.out.println(chaInt + " || " + k);
+            
+        }*/
+        return answer;
+    }
+}
