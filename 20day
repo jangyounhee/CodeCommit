@@ -1,0 +1,25 @@
+// 자릿수 더하기
+class Solution {
+    public int solution(int n) {
+        int answer = 0;
+        String intStr = Integer.toString(n);
+        
+        for(int i = 0; i < intStr.length(); i++) {
+            String num[] = new String [intStr.length()];
+
+            num[i] = intStr.substring(i, i+1);
+            System.out.print(num[i]);
+
+            answer+=Integer.parseInt(num[i]);
+        }
+        
+        return answer;
+    }
+} // 전에 풀었던 문제중에 완전 똑같은 내용이 있었다. 뭐가 다른거지..?
+
+/*
+  while(n>0){
+      answer+=n%10;
+      n/=10;
+  }
+*/ //이렇게 간단한 방법도 있다 ㅠㅠ
