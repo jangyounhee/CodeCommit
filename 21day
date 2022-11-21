@@ -1,0 +1,19 @@
+// 문자열 계산하기
+class Solution {
+    public int solution(String my_string) {
+        //int answer = 0;
+        //String strTrim = my_string.replace(" ", ""); // 원래 공백을 지우고 charAt()으로 한글자씩 저장했다가 String으로 바꾸고 int로 바꾸기 번거로워서 split이용
+        String[] strArr = my_string.split(" ");
+        int answer = Integer.parseInt(strArr[0]);
+        
+        for(int i = 1; i < strArr.length; i++) {
+            if(strArr[i].equals("+")) {
+                answer = answer + Integer.parseInt(strArr[i+1]); // answer += Integer.parseInt() 로 줄여 쓸 수 있음!
+            } else if(strArr[i].equals("-")) {
+                answer = answer - Integer.parseInt(strArr[i+1]); // answer -= Integer.parseInt() 로 줄여 쓸 수 있음!
+            }
+        }
+        
+        return answer;
+    }
+}
