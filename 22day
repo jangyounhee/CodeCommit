@@ -1,0 +1,46 @@
+// 문자열 반복 출력하기
+class Solution {
+    public String solution(String my_string, int n) {
+        String answer = "";
+        String[] strArray = my_string.split(""); // my_string자른 만큼 배열방 만들기
+    
+        for (int i = 0; i < my_string.length(); i++) {
+            strArray[i] = String.valueOf(my_string.charAt(i)); // 배열안에 my_string잘라서 넣기
+            answer += strArray[i].repeat(n); //repeat = 반복함수 > repeat(반복 수);
+        }
+        
+        return answer;
+    }
+}
+
+// 문자열안에 문자열
+class Solution {
+    public int solution(String str1, String str2) {
+        int answer = 0;
+        
+        if(str1.contains(str2)) {  //contains() 메서드를 사용하여 특정 문자열이 존재하는지 확인 > str1안에 str2가 존재하는지 확인 contains() 메서드는 대소문자 구분
+            answer = 1;
+        } else {
+            answer = 2;
+        }
+        return answer;
+    }
+}
+
+// 모음 제거
+class Solution {
+    public String solution(String my_string) {
+        String answer = "";
+        /*String[] vowels = {"a", "e", "i", "o", "u"};  // 와 진짜 이렇게 간단한 방법을 두고 쌩쇼한 기록...ㅋㅋ.ㅋ.ㅋ.ㅋㅋㅋ
+
+        for(int i = 0; i < my_string.length(); i++) {
+            //if(my_string.contains(vowels[i])) answer = my_string.replaceAll(vowels[i], "");
+            System.out.println(vowels);
+        }
+        
+        answer = my_string.replaceAll(vowels, "");*/
+        answer = my_string.replaceAll("a|e|i|o|u", "");  << 이거 한 줄이면 해결이었다..
+        
+        return answer;
+    }
+}
