@@ -1,0 +1,43 @@
+// 옷 가게 할인받기
+class Solution {
+    public int solution(int price) {
+        int answer = price;
+        
+        //System.out.println(price*5/100);  // 할인 금액
+        
+        /*if(price >= 500000) {
+            answer -= price*20/100; // 할인된 금액 = 가격 - 할인 금액
+        } else if(price >= 300000) {
+            answer -= price*10/100;
+        } else if(price >= 100000) {
+            answer -= price*5/100;
+        }*/  // 자꾸 2문제 틀렸다함 이유를 모름 퍼센트 계산방법 잘 몰라서 검색하고 새로풀어봄
+        
+        if(price >= 500000) {
+            answer = (int)(price*0.8); // int어쩌구 오류났음 소수점 때문인거 같아 (int)붙여줌
+        } else if(price >= 300000) {
+            answer = (int)(price*0.9);
+        } else if(price >= 100000) {
+            answer = (int)(price*0.95);
+        } // 성공
+        
+        return answer;
+    }
+}
+
+// 직각삼각형 출력하기
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        
+        for(int i = 1; i <= n; i++) {
+            for(int j = 0; j < i; j++) {
+                System.out.print("*");      
+            }
+            System.out.println();
+        }
+    }
+}
