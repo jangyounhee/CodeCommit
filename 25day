@@ -1,0 +1,43 @@
+// 옷 가게 할인받기
+class Solution {
+    public int solution(int price) {
+        int answer = price;
+        
+        //System.out.println(price*5/100);  //할인 금액
+        
+        /*if(price >= 500000) {
+            answer -= price*20/100;  // 답은 = 가격 - 할인 금액
+        } else if(price >= 300000) {
+            answer -= price*10/100;
+        } else if(price >= 100000) {
+            answer -= price*5/100;
+        }*/ // 했는데 자꾸 ㅜㅜ 2문제 틀렸다고 함 왜 틀렸는지 전혀 모르겠음 정신나갈거같음 백분율, 퍼센트에 쥐약이라 검색 엄청 해보고 다시 풀어봄...
+        
+        if(price >= 500000) {
+            answer = (int)(price*0.8);  // 처음에 int어쩌구 오류남, 대충 소수점 붙어서 그런가 보다 하고 붙여줌
+        } else if(price >= 300000) {
+            answer = (int)(price*0.9);
+        } else if(price >= 100000) {
+            answer = (int)(price*0.95);
+        } // 성공...
+        
+        return answer;
+    }
+}
+
+// 직각삼각형 출력하기
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        
+        for(int i = 1; i <= n; i++) {
+            for(int j = 0; j < i; j++) { 
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
