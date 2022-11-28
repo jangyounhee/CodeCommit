@@ -1,0 +1,29 @@
+// 개미 군단
+class Solution {
+    public int solution(int hp) {
+        int answer = 0;
+        //System.out.println(hp/5 + " || " + hp%5 + " || " + (hp%5)/3 + " || " + hp/3 + " || " + hp%3 + " || " + (hp%5)%3);
+        //System.out.println((hp/5+(hp%5)/3)+((hp%5)%3));
+        answer = (hp/5+(hp%5)/3)+((hp%5)%3);
+        return answer;
+    }
+}
+
+// 제곱수 판별하기
+class Solution {
+    public int solution(int n) {
+        int answer = 2;
+        
+        /*int i = 1; // 원래 이렇게 풀었었따..ㅋ.ㅋ answer = 0;하고 i < 50했는데 틀리길래 계속늘려서 1000까지 늘려버림ㅋㅋㅋ 근데 엄청 비효율적이고 바보같은 식같아서..
+        while(i < 1000) { // java 제곱수 함수를 검색해보니.. Math.Pow와 Math.sqrt가 나왓당.. Pow는 제곱수 sqrt는 제곱근!
+            i++;
+            if(i*i == n) break;
+        }
+        
+        if(i*i == n) answer = 1; else answer = 2;*/
+        
+        if((int)Math.sqrt(n) * (int)Math.sqrt(n) == n) answer = 1; // 제곱함수를 사용하여 한 줄로 바로 해결.. (int)를 붙이기전에 2문제 실패해서 (int)붙이니까 해결!
+        //System.out.println(Math.sqrt(n));
+        return answer;
+    }
+}
