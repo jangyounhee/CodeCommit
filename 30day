@@ -1,0 +1,31 @@
+Array와 ArrayList 차이
+ * Array는 길이가 고정 되어 있어, Array를 만든 후 길이를 변경할 수 없다.
+ * ArrayList는 요소들이 더해지만 자동적으로 늘어난다.
+ * Array특징 사이즈 변경 불가능 하나, 다차원 가능 ex) int arr[][][] = new int[3][4][5]
+ * ArrayList특징 사이즈 변경 가능, 추가 삭제 가능, 다차원 불가능
+ 
+ // 대문자와 소문자
+ import java.util.*;
+class Solution {
+    public String solution(String my_string) {
+        String answer = "";
+        char[] chaArr = my_string.toCharArray();
+        String str = "";
+        
+        //System.out.println(Arrays.toString(chaArr));
+        for(int i = 0; i < chaArr.length; i++) {
+            if(chaArr[i] >= 97 && chaArr[i] <= 122) { // 소문자 추출
+                str = chaArr[i] + ""; //str에 소문자 담아줌 chaArr[i]만 넣으면 char라서 안담김!
+                answer += str.toUpperCase(); // str을 대문자로 변환하여 answer에 하나씩 더함
+            } else if(chaArr[i] >= 65 && chaArr[i] <= 90) { // 대문자 추출
+                str = chaArr[i] + ""; 
+                answer += str.toLowerCase(); // 대문자를 소문자로 변환
+            }
+        }
+        
+        //answer = String.valueOf(chaArr); // 맨 첨에 풀다가.. isUpperCase() ? 이런거도 써보고 여러가지 방법 해봤는데 다 틀림 ㅜ 그래서 지워버렸는데 지우지 않기로했었는데무엥 ㅜㅜ
+                                           // 방금 찾아보니 Character.isUpperCase(string.charAt(i)) 이렇게 썼어야 한다. 제대로 안 읽어봐서 괜히 오래걸렸네 훨씬 빨린 끝냈을 듯..
+        //System.out.println(chaArr);
+        return answer;
+    }
+}
