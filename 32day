@@ -1,0 +1,15 @@
+// 외계행성의 나이
+class Solution {
+    public String solution(int age) {
+        String answer = "";
+        String strAge = String.valueOf(age); // age를 string으로 변환
+        String[] arrAge = strAge.split(""); // 잘라서 배열에 담음
+        
+        for(int i = 0; i < arrAge.length; i++) {
+            answer += ((char)((Integer.parseInt(arrAge[i])+97)));  // 아스키 97 > 소문자 a
+            System.out.println(answer);                            // 해당 숫자를 소문자 순서로 찾아서 더함!
+        }
+        
+        return answer;
+    }
+}
