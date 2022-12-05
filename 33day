@@ -1,0 +1,15 @@
+// 암호 해독
+class Solution {
+    public String solution(String cipher, int code) {
+        String answer = "";
+        String[] strCip = cipher.split(""); // cipher 한글자씩 담아줌!
+        for(int i = 1; i <= strCip.length; i++) {
+            if(i%code == 0) {
+                answer+= strCip[i-1]; // 아무생각 없이 i넣었다가 답보다 한 칸 뒤에 있는 글자를 담아줘서 -1해줌!
+                //System.out.println(i + " | " + code + " | " + i%code);
+                //System.out.println(answer);
+            }
+        }
+        return answer;
+    }
+}
