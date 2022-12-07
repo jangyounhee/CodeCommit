@@ -1,0 +1,20 @@
+// 최댓값 만들기
+import java.util.*;
+class Solution {
+    public int solution(int[] numbers) {
+        int answer = 0;
+        
+        Arrays.sort(numbers); // 배열 정렬
+        
+        int num1 = numbers[0] * numbers[1]; // 음수 * 음수
+        int num2 = numbers[numbers.length-1] * numbers[numbers.length-2]; // 양수 * 양수
+        
+        /*for(int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);    // 제대로 정렬 됐나 확인
+        }*/
+        
+        if (num1 < num2) answer = num2; else answer = num1; // num1이 num2보다 적으면 num2!! ㅏㅇ니면 num1!!
+        
+        return answer;
+    }
+}
