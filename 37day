@@ -1,0 +1,46 @@
+// 중복된 문자
+
+// 가위바위보
+class Solution {
+    public String solution(String rsp) {
+        String answer = "";
+        String[] rspArr = rsp.split("");
+        
+        /*for(int i = 0 ; i < rsp.length(); i++) { // 맨처음 if로 해봣음 근데 예제2가 안풀림
+            if(rsp.equals("2")) {
+                answer += "0";   
+            } else if(rsp.equals("0")) {
+                 answer += "5";   
+            } else if(rsp.equals("5")) {
+              answer += "2";  
+            }    
+        }*/
+        
+        /*
+        for(int i = 0; i < rsp.length(); i++) { // 스위치는 되려나? 해봣음 여전히 예제2가 안풀림
+            switch(rsp) {
+                case "2":
+                    answer += "0";
+                    break;
+                case "0":
+                    answer += "5";
+                    break;
+                case "5":
+                    answer += "2";
+                    break;
+            }
+        }*/
+        
+        for(int i = 0; i < rspArr.length; i++) { // 예제2가 한번에 3개가있어서 못먹는구나를 이제서야 인지..ㅋㅋㅋ 배열에 담아버림!
+            if(rspArr[i].equals("2")) {
+                answer += "0";   
+            } else if(rspArr[i].equals("0")) {
+                 answer += "5";   
+            } else if(rspArr[i].equals("5")) {
+              answer += "2";  
+            }    
+        }
+            
+        return answer;
+    }
+}
