@@ -1,0 +1,38 @@
+// A로 B만들기
+import java.util.*;
+
+class Solution {
+    public int solution(String before, String after) {
+        int answer = 0;
+        /*String reverse = new StringBuffer(before).reverse().toString();
+        
+        if(reverse.equals(after)) {
+            answer = 1;   
+        } else {
+            answer = 0;   
+        }
+        System.out.println(reverse.equals(after));*/
+        /*for(int i = 0; i < before.length(); i++) {
+            char chrBf = before.charAt(i);
+            char chrAf = after.charAt(i);
+        }*/
+        
+        /*String[] strBf = before.split("");
+        String[] strAf = after.split("");
+
+        Arrays.sort(strBf);
+        Arrays.sort(strAf);
+        
+        if(strBf.equals(strAf)) answer = 1; else answer = 0;*/  -- 여기까지 많은 방법을 시도해봄..ㅋㅋ
+        
+        char[] chrBf = before.toCharArray();
+        char[] chrAf = after.toCharArray();
+        
+        Arrays.sort(chrBf);
+        Arrays.sort(chrAf);
+        
+        if(String.valueOf(chrBf).equals(String.valueOf(chrAf))) answer = 1; else answer = 0;
+        
+        return answer;
+    }
+}
