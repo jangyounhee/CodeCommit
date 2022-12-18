@@ -1,0 +1,11 @@
+// 피자 나눠 먹기(2)
+class Solution {
+    public int solution(int n) {
+        int answer = 1; // 피자개수!
+        while(true) {
+            if((answer*6%n)==0) break; // 피자개수*6 / 인원
+            answer++;   
+        }
+        return answer;
+    }
+}
