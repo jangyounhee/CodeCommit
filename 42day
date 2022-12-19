@@ -1,0 +1,15 @@
+// 가까운 수
+class Solution {
+    public int solution(int[] array, int n) {
+        int answer = 0;
+        int min = Integer.MAX_VALUE; // 최소값 저장
+        for(int i = 0; i < array.length; i++) {
+            int num = Math.abs(array[i]-n); // 절대값 반환
+            if(min > num) { // 절대값이 최소값보다 작으면
+                min = num; // 최소값 교체
+                answer = array[i]; 
+            }
+        }
+        return answer;
+    }
+}
